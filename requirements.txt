@@ -1,0 +1,27 @@
+# ────────────────────────────────
+# 📦 requirements.txt (with pinned versions)
+# ────────────────────────────────
+openai==1.14.3
+qdrant-client==1.7.0
+faiss-cpu==1.7.4
+pymupdf==1.22.3
+pymongo==4.7.0
+mysql-connector-python==8.3.0
+python-dotenv==1.0.1
+streamlit==1.35.0
+langchain==0.1.20
+sentence-transformers==2.7.0
+
+
+# openai==1.14.3
+# httpx==0.27.0
+
+# qdrant-client==1.7.0
+# faiss-cpu==1.7.4
+# pymupdf==1.22.3
+# pymongo==4.7.0
+# mysql-connector-python==8.3.0
+# python-dotenv==1.0.1
+# streamlit==1.35.0
+# langchain==0.1.20
+# sentence-transformers==2.7.0

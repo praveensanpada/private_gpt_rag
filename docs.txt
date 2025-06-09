@@ -1,0 +1,52 @@
+# Private GPT - Expert-Level RAG LLM Application
+
+# ────────────────────────────────
+# 📁 Project Structure
+# ────────────────────────────────
+
+# private_gpt/
+# ├── app.py                     # Main Streamlit/Flask UI or API entrypoint
+# ├── requirements.txt          # Python dependencies
+# ├── .env                      # API keys and configs
+# ├── run.sh                    # Shell script to activate venv and run app
+# ├── /configs
+# │   └── settings.py           # Config and env var loader
+# ├── /ingestion
+# │   ├── file_loader.py        # Load PDF, TXT, JSON
+# │   ├── db_loader.py          # Mongo/MySQL data ingestor
+# │   └── chunker.py            # Intelligent chunker (token/semantic aware)
+# ├── /vectorstore
+# │   ├── qdrant_client.py      # Qdrant client setup
+# │   └── embed_store.py        # FAISS embedding & storage logic
+# ├── /retriever
+# │   └── retriever.py          # Query vector DB, return top-k chunks
+# ├── /llm
+# │   └── openai_interface.py   # Call OpenAI API
+# └── /utils
+#     └── helpers.py            # Utility functions
+
+# ────────────────────────────────
+# 🚀 Getting Started (run.sh)
+# ────────────────────────────────
+
+# run.sh
+#!/bin/bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+
+
+
+=====================================================================
+ps_rag_app
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.2a__KzPAka-yPcyDwoYx9CH45R931xZ_4OrqthCTGoY
+
+from qdrant_client import QdrantClient
+
+qdrant_client = QdrantClient(
+    url="https://aa012f32-4243-455d-97e5-a4473a8bd4f3.europe-west3-0.gcp.cloud.qdrant.io:6333", 
+    api_key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.2a__KzPAka-yPcyDwoYx9CH45R931xZ_4OrqthCTGoY",
+)
+
+print(qdrant_client.get_collections())
